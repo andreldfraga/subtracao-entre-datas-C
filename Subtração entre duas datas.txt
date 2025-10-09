@@ -1,0 +1,112 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+const int meses[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
+typedef struct {
+    int dia;
+    int mes;
+    int ano;
+} data_type;
+
+bool ehBissexto(int ano)
+{
+    return (ano % 4 == 0) && (ano % 100 != 0 || ano % 400 == 0);
+}
+
+int contaBissextos(int ano)
+{
+    return (ano / 4) - (ano / 100) + (ano / 400);
+}
+
+void ler_data(data_type *data, char indice){
+    int mes, dia, bissexto, maximo_de_dias;
+    
+    printf("Digite o ano da data %c: ",indice);
+    scanf("%d",&data->ano);
+    bissexto = ehBissexto(data->ano);
+    
+    while(true){
+        printf("Digite o mês da data %c (1-12): ",indice);
+        scanf("%d",&mes); 
+        if(mes > 0 && mes < 13){
+            data->mes = mes;
+            break;
+        }
+        puts("Mês inválido (digite um número entre 1-12)");
+    }
+    if(mes != 2){
+        maximo_de_dias = meses[mes-1];
+    }else{
+        if(bissexto){
+            maximo_de_dias = 29;
+        }else{
+            maximo_de_dias = 28;
+        }
+    }
+    
+    while(true){
+        printf("Digite o dia da data %c: ",indice);
+        scanf("%d",&dia);
+        if(dia > 0 && dia<=maximo_de_dias){
+            data->dia = dia;
+            break;
+        }else{
+            printf("Data inválida, digite um número entre 1-%d\n",maximo_de_dias);
+        }
+    }
+}
+
+int calcula_total_de_dias(data_type data){
+    
+    int total = 0;
+    
+    total += (data.ano - 1) * 365;
+    
+    for(int i = 1; i < data.mes; i++){
+        total += meses[i-1];
+    }
+        
+    total += data.dia - 1;
+    
+    total += contaBissextos(data.ano - 1);
+    
+    if(ehBissexto(data.ano) && (data.mes-1) >= 2){
+        total += 1;
+    }
+    
+    return total;
+}
+
+int diferenca_de_dias(data_type d1, data_type d2){
+    
+    int total_data1 = calcula_total_de_dias(d1);
+    
+    int total_data2 = calcula_total_de_dias(d2);
+    
+    if (total_data1 > total_data2)
+        return total_data1 - total_data2;
+    else
+        return total_data2 - total_data1;
+}
+
+int main()
+{
+    data_type data1, data2;
+    
+    int diferença_em_dias;
+    
+    puts("******Cauculadora de diferença entre datas******\n\n");
+    
+    puts("***Dados da data A***");
+    ler_data(&data1,'A');
+    puts("\n***Dados da data B***");
+    ler_data(&data2, 'B');
+    
+    diferença_em_dias = diferenca_de_dias(data1,data2);
+    
+    printf("\nA diferença entre as duas datas é de:\n- %d dias, \n- ou %d meses,\n- ou %d anos.",diferença_em_dias,(diferença_em_dias / 30),(diferença_em_dias / 365));
+    
+    return 0;
+}
