@@ -42,7 +42,7 @@ Isso gera um número absoluto que representa “quantos dias já se passaram des
 
 ---
 
-## ➗ 4. Diferença Entre as Datas
+## ➖ 4. Diferença Entre as Datas
 
 Com as duas datas convertidas em totais de dias:
 
