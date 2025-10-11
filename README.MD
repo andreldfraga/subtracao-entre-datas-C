@@ -44,7 +44,7 @@ O código utiliza:
 
 2.Execute:
   ```bash
-    ./datas
+  ./datas
 
 ---
 
