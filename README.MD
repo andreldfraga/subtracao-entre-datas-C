@@ -43,6 +43,7 @@ O código utiliza:
    gcc datas.c -o datas
 
 2.Execute:
+  ```bash
     ./datas
 
 ---
