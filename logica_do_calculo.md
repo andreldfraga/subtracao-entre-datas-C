@@ -9,8 +9,6 @@ Este documento explica em detalhes a lógica matemática usada pelo programa par
 Cada data é convertida em um número total de dias desde o **ano 1**, seguindo a ideia de uma “linha do tempo contínua”.  
 Assim, podemos calcular a diferença entre duas datas apenas subtraindo esses totais.
 
-**Fórmula básica:**
-
 ---
 
 ## 🔁 2. Cálculo dos Anos Bissextos
@@ -20,11 +18,6 @@ O calendário gregoriano define anos bissextos como aqueles:
 - divisíveis por **4**,  
 - **exceto** os divisíveis por **100**,  
 - **a menos** que também sejam divisíveis por **400**.
-
-**Fórmula usada:**
-
-
-Essa conta garante que apenas os anos realmente bissextos sejam considerados no total de dias.
 
 ---
 
@@ -49,7 +42,7 @@ Com as duas datas convertidas em totais de dias:
 
 A diferença obtida é sempre positiva e representa o **intervalo exato em dias** entre as duas datas.
 
-Depois, o programa converte essa diferença em valores aproximados:
+Depois, o programa converte essa diferença em valores aproximados
 
 
 ---
