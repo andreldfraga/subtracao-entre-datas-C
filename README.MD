@@ -1,6 +1,6 @@
 # 🗓️ Calculadora de Diferença entre Datas
 
-Um pequeno programa em **C** que calcula a diferença entre duas datas, mostrando o resultado em **dias, meses e anos**.  
+Um programa em **C** que calcula a diferença entre duas datas, mostrando o resultado em **dias, meses e anos**.  
 Feito com o objetivo de praticar manipulação de estruturas, funções e controle de fluxo em C.
 
 ---
@@ -36,16 +36,7 @@ O código utiliza:
 
 ---
 
-## 🚀 Como executar
-
-1. Compile o programa:
-   ```bash
-   gcc datas.c -o datas
-
----
-
-
 ## 📘 Explicação Matemática
 
-O cálculo da diferença entre as datas é explicado detalhadamente no arquivo EXPLICACAO_MATEMATICA.md
+O cálculo da diferença entre as datas é explicado detalhadamente no arquivo logica_do_cauculo.md
 
