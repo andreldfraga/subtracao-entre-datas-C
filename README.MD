@@ -1,11 +1,11 @@
-# 🗓️ Calculadora de Diferença entre Datas
+# Calculadora de Diferença entre Datas
 
 Um programa em **C** que calcula a diferença entre duas datas, mostrando o resultado em **dias, meses e anos**.  
 Feito com o objetivo de praticar manipulação de estruturas, funções e controle de fluxo em C.
 
 ---
 
-## 💡 Sobre o projeto
+## Sobre o projeto
 
 O programa solicita duas datas ao usuário (Data A e Data B) e calcula a diferença entre elas considerando **anos bissextos**.  
 O resultado é exibido em:
@@ -15,7 +15,7 @@ O resultado é exibido em:
 
 ---
 
-## ⚙️ Funcionalidades
+## Funcionalidades
 
 - Validação de datas (dia, mês e ano)
 - Verificação de ano bissexto
@@ -24,7 +24,7 @@ O resultado é exibido em:
 
 ---
 
-## 🧩 Estrutura do código
+## Estrutura do código
 
 O código utiliza:
 - `struct` para armazenar as datas  
@@ -36,7 +36,7 @@ O código utiliza:
 
 ---
 
-## 📘 Explicação Matemática
+## Explicação Matemática
 
 O cálculo da diferença entre as datas é explicado detalhadamente no arquivo logica_do_cauculo.md
 
