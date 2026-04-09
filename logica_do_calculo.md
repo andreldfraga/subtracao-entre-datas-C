@@ -1,17 +1,17 @@
-# 🧮 Explicação Matemática do Cálculo de Diferença entre Datas
+#  Explicação Matemática do Cálculo de Diferença entre Datas
 
 Este documento explica em detalhes a lógica matemática usada pelo programa para calcular a diferença entre duas datas em **dias**, **meses** e **anos aproximados**.
 
 ---
 
-## 🗓️ 1. Representação das Datas
+##  1. Representação das Datas
 
 Cada data é convertida em um número total de dias desde o **ano 1**, seguindo a ideia de uma “linha do tempo contínua”.  
 Assim, podemos calcular a diferença entre duas datas apenas subtraindo esses totais.
 
 ---
 
-## 🔁 2. Cálculo dos Anos Bissextos
+##  2. Cálculo dos Anos Bissextos
 
 O calendário gregoriano define anos bissextos como aqueles:
 
@@ -21,7 +21,7 @@ O calendário gregoriano define anos bissextos como aqueles:
 
 ---
 
-## 🧩 3. Conversão da Data em Dias
+##  3. Conversão da Data em Dias
 
 Para transformar uma data em número total de dias, o programa faz:
 
@@ -47,7 +47,7 @@ Depois, o programa converte essa diferença em valores aproximados
 
 ---
 
-## 🧠 5. Possíveis Melhorias
+##  5. Possíveis Melhorias
 
 O cálculo atual usa aproximações (30 dias por mês e 365 por ano).  
 Algumas possíveis melhorias seriam:
